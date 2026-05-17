@@ -18,7 +18,5 @@ After placing the manifest in:
 .repo/local_manifests/klee.xml
 
 Run:
-
-```bash
 repo sync -j$(nproc --all)
 
