@@ -14,6 +14,7 @@ It defines all required device-specific repositories such as:
 ## 🚀 How to sync
 
 After placing the manifest in:
+```bash
 .repo/local_manifests/klee.xml
 
 Run:
