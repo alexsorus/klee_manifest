@@ -1,62 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote
-    name="klee"
-    fetch="https://github.com/alexsorus" />
+    <!-- Remotes -->
+    <remote
+        name="klee"
+        fetch="https://github.com/alexsorus" />
 
-  <remote
-    name="halcyon"
-    fetch="https://github.com/halcyonproject" />
+    <remote
+        name="halcyon"
+        fetch="https://github.com/halcyonproject" />
 
-  <project
-    path="device/klee"
-    name="android_device_klee"
-    remote="klee"
-    revision="main" />
+    <!-- Device Tree -->
+    <project
+        path="device/xiaomi/klee"
+        name="android_device_klee"
+        remote="klee"
+        revision="main" />
 
-  <project
-    path="kernel/klee"
-    name="android_kernel_klee"
-    remote="klee"
-    revision="main" />
+    <!-- Kernel -->
+    <project
+        path="kernel/xiaomi/klee"
+        name="android_kernel_klee"
+        remote="klee"
+        revision="main" />
 
-  <project
-    path="vendor/klee"
-    name="android_vendor_klee"
-    remote="klee"
-    revision="main" />
+    <!-- Vendor -->
+    <project
+        path="vendor/xiaomi/klee"
+        name="android_vendor_klee"
+        remote="klee"
+        revision="main" />
 
-  <project
-    path="device/mediatek/sepolicy_vndr"
-    name="android_device_mediatek_sepolicy_vndr"
-    remote="klee"
-    revision="main" />
+    <!-- Mediatek SEPolicy -->
+    <project
+        path="device/mediatek/sepolicy_vndr"
+        name="android_device_mediatek_sepolicy_vndr"
+        remote="klee"
+        revision="main" />
 
-  <project
-    path="hardware/mediatek"
-    name="android_hardware_mediatek"
-    remote="klee"
-    revision="main" />
+    <!-- Hardware Mediatek -->
+    <project
+        path="hardware/mediatek"
+        name="android_hardware_mediatek"
+        remote="klee"
+        revision="main" />
 
-  <project
-    path="hardware/xiaomi"
-    name="android_hardware_xiaomi"
-    remote="klee"
-    revision="main" />
+    <!-- Hardware Xiaomi -->
+    <project
+        path="hardware/xiaomi"
+        name="android_hardware_xiaomi"
+        remote="klee"
+        revision="main" />
 
-  <remove-project name="LineageOS/android_build_soong" />
-  <project
-    path="build/soong"
-    name="build_soong"
-    remote="halcyon"
-    revision="592363152191a911961ded314a928c725c283a36" />
+    <!-- Halcyon Soong Fix -->
+    <remove-project name="LineageOS/android_build_soong" />
+    <project
+        path="build/soong"
+        name="build_soong"
+        remote="halcyon"
+        revision="592363152191a911961ded314a928c725c283a36" />
 
-  <remove-project name="LineageOS/android_packages_modules_Bluetooth" />
-  <project
-    path="packages/modules/Bluetooth"
-    name="packages_modules_Bluetooth"
-    remote="halcyon"
-    revision="9a7277fbbf3c9cf4eb8a30d9358c1ada660acf58" />
+    <!-- Halcyon Bluetooth Fix -->
+    <remove-project name="LineageOS/android_packages_modules_Bluetooth" />
+    <project
+        path="packages/modules/Bluetooth"
+        name="packages_modules_Bluetooth"
+        remote="halcyon"
+        revision="9a7277fbbf3c9cf4eb8a30d9358c1ada660acf58" />
 
 </manifest>
